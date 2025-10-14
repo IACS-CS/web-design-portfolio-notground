@@ -17,7 +17,7 @@
 .hero a {
   color: white;
   text-decoration: underline;
-  text-decoration-color: #ff7ad1;
+  text-decoration-color: #f0a5ff;
 }
 
 /* A little "activation" to demonstrate JS is working in the template */
@@ -29,7 +29,7 @@
 }
 .hero.active a {
   color: white;
-  text-decoration-color: #0033a0;
+  text-decoration-color: #f0a5ff;
 }
 
 @media (max-width: 800px) {
