@@ -1,31 +1,34 @@
-/* This code was generated with help from Github Copilot
-in response to the prompt "Create a two-column layout where each section has text on one side and an image on the other" - 1/12/26 */
+/* This code was generated with help from Github Copilot - 1/12/26 */
 
-section {
+section:not(.hero) {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
   margin-bottom: 3rem;
   flex-wrap: nowrap;
+  position: relative;
 }
 
 section > div {
-  flex: 1;
+  flex: 2;
   min-width: 300px;
+  position: relative;
+  z-index: 2;
+  background: #f0f0f0;
+  padding: 1rem;
 }
 
 section img {
-  flex: 1;
-  min-width: 300px;
-  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 175px;
   height: auto;
   object-fit: cover;
+  transition: transform 0.3s ease;
+  z-index: 1;
 }
 
-/* Stack on smaller screens */
-@media (max-width: 768px) {
-  section {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
+section:hover img {
+  transform: translateX(220px);
 }
